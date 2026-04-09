@@ -1,0 +1,73 @@
+@import "./partials/reset";
+@import "./partials/normalize";
+@import "./partials/spazing";
+@import "./partials/color";
+@import "./partials/font";
+@import "./partials/button";
+@import "./partials/mixin";
+@import "./partials/animation";
+
+nav {
+  @include display-nav;
+  @include bg-hero;
+  padding-bottom: 2em;
+}
+
+.btn1 {
+  @include btn-1;
+}
+.btn2 {
+  @include btn-2;
+}
+.btn3 {
+  @include btn-3;
+}
+
+a {
+  @include p-white;
+}
+// h1 {
+//   //   font-size: 3em;
+// }
+.hero {
+  @include display-hero;
+  @include bg-hero;
+  p {
+    @include p-white;
+    margin: 0 auto;
+    margin-bottom: 1em;
+  }
+  .hero-text {
+    width: 25%;
+    flex: 1;
+  }
+  .hero-img {
+    width: 70%;
+    max-width: 350px;
+    flex: 1;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border: 1px solid white;
+      border-radius: 20px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.9);
+    }
+  }
+}
+.notebook-grid {
+  @include notebook-grid;
+}
+.notebook-grid div:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.notebook-grid div:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.notebook-grid div:nth-child(3) {
+  animation-delay: 0.5s;
+}
+.notebook-grid div:nth-child(4) {
+  animation-delay: 0.7s;
+}
